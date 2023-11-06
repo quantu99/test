@@ -1,5 +1,5 @@
 import styles from './Navbar.module.css';
-function Navbar({ setX, handle }) {
+function Navbar({ setX, handle, handleSelect }) {
     return (
         <div className={styles.container}>
             <div className={styles.navbar}>
@@ -27,6 +27,9 @@ function Navbar({ setX, handle }) {
                     </li>
                     <button onClick={handle} className={styles.btnAll}>
                         Quick choose all
+                    </button>
+                    <button onClick={() => handleSelect([])} className={styles.btnRemove}>
+                        Clear
                     </button>
                 </ul>
             </div>

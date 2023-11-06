@@ -6,7 +6,6 @@ function App() {
     const [x, setX] = useState(6);
     const [y, setY] = useState(70);
     const [selectedNumbers, setSelectedNumbers] = useState([]);
-
     const handleQuickChoose = () => {
         const newSelectedNumbers = [];
         for (let i = 0; i < x; i++) {
@@ -65,7 +64,7 @@ function App() {
         <div>
             <h1 className={styles.title}>TEST</h1>
             <div className={styles.container}>
-                <Navbar handle={handleQuickChoose} setX={setX} />
+                <Navbar handleSelect={setSelectedNumbers} handle={handleQuickChoose} setX={setX} />
                 <div className={styles.boxContainer}>
                     {Array.from({ length: x }, (_, i) => (
                         <div className={styles.box} key={i}>

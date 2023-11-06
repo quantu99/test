@@ -40,3 +40,18 @@
         background-color: #c2d3f1;
     }
 }
+.btnRemove {
+    border: none;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f22c4d;
+    border-radius: 50px;
+    color: #fff;
+    margin-left: 10px;
+    animation: appear 1s ease-out;
+    &:hover {
+        transition: all 0.3s ease-out;
+        background-color: #aa4c5b;
+    }
+}

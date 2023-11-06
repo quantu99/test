@@ -3,12 +3,12 @@ import Navbar from './components/navbar/Navbar';
 import styles from './App.module.css';
 
 function App() {
-    const [x, setX] = useState(6);
+    const [box, setBox] = useState(6);
     const [y, setY] = useState(70);
     const [selectedNumbers, setSelectedNumbers] = useState([]);
     const handleQuickChoose = () => {
         const newSelectedNumbers = [];
-        for (let i = 0; i < x; i++) {
+        for (let i = 0; i < box; i++) {
             const randomNumbers = [];
             while (randomNumbers.length < 5) {
                 const randomNumber = Math.floor(Math.random() * y) + 1;
@@ -64,9 +64,9 @@ function App() {
         <div>
             <h1 className={styles.title}>TEST</h1>
             <div className={styles.container}>
-                <Navbar handleSelect={setSelectedNumbers} handle={handleQuickChoose} setX={setX} />
+                <Navbar handleSelect={setSelectedNumbers} handle={handleQuickChoose} setBox={setBox} />
                 <div className={styles.boxContainer}>
-                    {Array.from({ length: x }, (_, i) => (
+                    {Array.from({ length: box }, (_, i) => (
                         <div className={styles.box} key={i}>
                             <button onClick={() => handleQuickChooseForPer(i)} className={styles.btn}>
                                 Quick choose

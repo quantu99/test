@@ -1,0 +1,71 @@
+.container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #cdcdcd;
+}
+.title {
+    text-align: center;
+    font-size: 40px;
+}
+.boxContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+.box {
+    width: 20%;
+    &:hover .btn {
+        display: block;
+    }
+}
+.itemContainer {
+    background-color: #e3ebf9;
+    margin: 10px;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    &:hover {
+        transition: all 0.3s ease-out;
+        background-color: #c2d3f1;
+    }
+}
+.item {
+    background-color: #fff;
+    display: block;
+    width: 16.66667%;
+    text-align: center;
+    border: 1px solid black;
+    margin: 3px;
+    &:hover {
+        transition: all 0.3s ease-out;
+        background-color: #9fa5ac;
+    }
+}
+.active {
+    background-color: #9fa5ac;
+}
+.btn {
+    display: none;
+    border: none;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #e3ebf9;
+    border-radius: 50px;
+    margin-left: 10px;
+    animation: appear 1s ease-out;
+    &:hover {
+        transition: all 0.3s ease-out;
+        background-color: #c2d3f1;
+    }
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

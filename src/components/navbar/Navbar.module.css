@@ -1,0 +1,42 @@
+.container {
+    padding: 10px 20px;
+}
+
+.navbar {
+    padding: 20px 0px;
+}
+.list {
+    list-style: none;
+    display: flex;
+}
+.line + .line {
+    margin-left: 14px;
+}
+.line {
+    color: #004cc6;
+    display: flex;
+    align-items: center;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 18px;
+    &:hover {
+        transition: all 0.3s ease-out;
+        color: #0f3777;
+    }
+}
+.btnAll {
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 50px;
+    border: 1px solid #f22c4d;
+    color: #f22c4d;
+    margin-left: 40px;
+    animation: appear 1s ease-out;
+    &:hover {
+        transition: all 0.3s ease-out;
+        background-color: #c2d3f1;
+    }
+}

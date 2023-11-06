@@ -33,38 +33,12 @@ function App() {
         updatedSelectedNumbers[index] = randomNumbers;
         setSelectedNumbers(updatedSelectedNumbers);
     };
-    // const handleItemSelection = (itemIndex, j) => {
-    //     if (selectedNumbers.length === 0 || !selectedNumbers[itemIndex]) {
-    //         const updatedSelectedNumbers = [...selectedNumbers];
-    //         updatedSelectedNumbers[itemIndex] = [];
-    //         if (updatedSelectedNumbers[itemIndex].includes(j + 1)) {
-    //             updatedSelectedNumbers[itemIndex] = updatedSelectedNumbers[itemIndex].filter(
-    //                 (number) => number !== j + 1,
-    //             );
-    //         } else {
-    //             updatedSelectedNumbers[itemIndex].push(j + 1);
-    //         }
 
-    //         setSelectedNumbers(updatedSelectedNumbers);
-    //     } else {
-    //         const updatedSelectedNumbers = [...selectedNumbers];
-
-    //         if (updatedSelectedNumbers[itemIndex].includes(j + 1)) {
-    //             updatedSelectedNumbers[itemIndex] = updatedSelectedNumbers[itemIndex].filter(
-    //                 (number) => number !== j + 1,
-    //             );
-    //         } else {
-    //             updatedSelectedNumbers[itemIndex].push(j + 1);
-    //         }
-    //         setSelectedNumbers(updatedSelectedNumbers);
-    //     }
-    // };
     const handleItemSelection = (itemIndex, j) => {
         const selectedItems = selectedNumbers[itemIndex] || [];
         const isSelected = selectedItems.includes(j + 1);
 
         if (isSelected) {
-            // Deselect the item if already selected
             const updatedSelectedItems = selectedItems.filter((item) => item !== j + 1);
             setSelectedNumbers((prevSelectedNumbers) => {
                 const updatedSelectedNumbersCopy = [...prevSelectedNumbers];
@@ -72,13 +46,9 @@ function App() {
                 return updatedSelectedNumbersCopy;
             });
         } else {
-            // Check if the number of active classes is already 5
             if (selectedItems.length === 5) {
-                // If it is, prevent selection
                 return;
             }
-
-            // Select the item if not selected and the number of active classes is less than 5
             const updatedSelectedItems = [...selectedItems];
             updatedSelectedItems.push(j + 1);
             setSelectedNumbers((prevSelectedNumbers) => {

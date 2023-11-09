@@ -23,13 +23,23 @@
     margin-bottom: 5px;
     padding: 10px;
     border-radius: 5px;
-    display: flex;
-    flex-wrap: wrap;
     cursor: pointer;
     &:hover {
         transition: all 0.3s ease-out;
         background-color: #c2d3f1;
     }
+}
+.numberContainer {
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+}
+.secondNumberContainer {
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
 }
 .item {
     background-color: #fff;
@@ -45,6 +55,10 @@
 }
 .active {
     background-color: #9fa5ac;
+}
+.activeSecond {
+    background-color: #aa4c5b;
+    color: #fff;
 }
 .btn {
     display: none;

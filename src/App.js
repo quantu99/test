@@ -105,7 +105,12 @@ function App() {
         <div>
             <h1 className={styles.title}>TEST</h1>
             <div className={styles.container}>
-                <Navbar handleSelect={setSelectedNumbers} handle={handleQuickChoose} setBox={setBox} />
+                <Navbar
+                    handleSelectSecond={setSelectedNumbersSecond}
+                    handleSelect={setSelectedNumbers}
+                    handle={handleQuickChoose}
+                    setBox={setBox}
+                />
                 <div className={styles.boxContainer}>
                     {Array.from({ length: box }, (_, i) => (
                         <div className={styles.box} key={i}>
